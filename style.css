@@ -5,7 +5,7 @@ html {
 :root {
     --background-principal: #48e;
     --color-principal: #fff;
-    --fs-texto: clamp(0.85rem, 4vw, 1rem);
+    --fs-texto: clamp(0.9rem, 4vw, 1rem);
     --fs-titulo: clamp(1.3rem, 2vw, 1.5rem);
 
 }
@@ -401,4 +401,5 @@ button:hover {
     }
 
 }
+
 
