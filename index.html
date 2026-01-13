@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!----------HEADER---------->
+
+    <header class="header">
+            <div class="header_container">
+                <div class="logo_header">
+                    <img src="diente_icon.png" alt="diente" class="icon_header">
+                    <span>SmileTime</span>
+                </div>
+                <h1>Tu sonrisa perfecta <br>comienza aquí </h1>
+                <p>Atención dental profesional con tecnología de última generación. Reserva tu cita en línea y sonríe con confianza.</p>
+            </div>
+            <a class="header_link" href="#venir">
+                <div class="container_logo">
+                    <img src="agenda.png" alt="agenda" class="icon_link">
+                </div>
+                <span class="reserved_appointment" href="#venir">Reservar cita ahora  <span class="flechita_header"> →</span></span>
+            </a>
+    </header>
+
+    <!----------HEADER END--------->
+
+    <!----------NAV SECTION---------->
+
+    <nav class="navbar">
+        
+        <h2>Nuestros Servicios</h2>
+        <p>Selecciona el servicio que necesitas y agenda tu cita de forma rápida y sencilla</p>
+        <section class="navbar_section">
+            <a class="section_containers btn--section" href="#venir" data-servicio="limpieza">
+                <div class="navbar_logo">
+                    <img src="estrellita.png" alt="estrellita" class="navbar_img">
+                </div>
+                <span class="sub-titulo">Limpieza Dental</span>
+                <p>Limpieza profunda y prevención de enfermedades dentales</p>
+            </a>
+            <a class="section_containers btn--section" href="#venir" data-servicio="ortodoncia">
+                <div class="navbar_logo">
+                    <img src="vital.png" alt="signo vital" class="navbar_img">
+                </div>
+                <span class="sub-titulo">Ortodoncia</span>
+                <p>Alineación dental con brackets o alineadores invisibles</p>
+            </a>
+            <a class="section_containers btn--section" href="#venir" data-servicio="odontologia_general">
+                <div class="navbar_logo">
+                    <img src="escudo.png" alt="escudo" class="navbar_img">
+                </div>
+                <span class="sub-titulo">Odontología General</span>
+                <p>Tratamientos generales y consultas de rutina</p>
+            </a>
+            <a class="section_containers btn--section" href="#venir" data-servicio="blanqueamiento">
+                <div class="navbar_logo">
+                    <img src="dientes.png" alt="dientes" class="navbar_img">
+                </div>
+                <span class="sub-titulo">Blanqueamineto</span>
+                <p>Sonrisa más blanca y brillante de una sola sesión</p>
+            </a>
+        </section>
+    </nav>
+
+    <!----------NAV SECTION END---------->
+
+    <!----------MAIN SECTION---------->
+
+    <main class="main" id="venir">
+            <span class="titulo">Reserva tu cita</span>
+            <p>Completa el formulario y nos pondremos en contacto para confirmar tu cita</p>
+        <div class="main_container">
+            <form class="form">
+                <label for="transport">
+                    <span class="span_service" >Servicio</span>
+                    <select name="transport" id="transport" required>
+                        <option value="" >Selecciona un servicio</option>
+                        <option value="limpieza" >Limpieza dental</option>
+                        <option value="ortodoncia">ortodoncia</option>
+                        <option value="blanqueamiento">Blanqueamineto</option>
+                        <option value="odontologia_general">
+                            Odontologia general
+                        </option>
+                    </select>
+                </label>
+                <div class="container_label">
+                    <label class="label_time" id="fecha">
+                    <span class="span_service">Fecha</span>
+                    <input type="date" name="fecha" class="label_date" required>
+                    </label >
+                    <label class="label_time" id="label_time">
+                        <span class="span_service">Hora</span>
+                        <input type="time" min="08:00" max="18:00" name="time" class="label_date"  required>
+                    </label>
+                </div>
+                
+                <div class="informacion">
+                    <p>Información del Paciente</p>
+                    <label for="name_usuario">
+                        <span class="date_personal">Nombre Completo</span>
+                        <input type="text" id="name_usuario" class="datos" placeholder="Ej: María García" name="name_usuario" required >
+                    </label>
+                    <label for="correo_electronico">
+                        <span class="date_personal">Correo electrónico</span>
+                        <input type="email" id="correo_electronico" class="datos" placeholder="ejemplo@correo.com" name="correo_electronico" required>
+                    </label>
+                </div>
+                <button class="button_reserva reserva--btn"  type="button">
+                    <p>Confirmar Reserva</p>
+                    <span class="flechita">→</span>
+                </button>
+            </form>
+        </div>
+    </main>
+        
+    <!----------MAIN SECTION END---------->
+
+    <!----------VENTANA MODAL JS---------->
+
+
+    <div class="ventana" >
+        <div  class="items_ventana" id="items_ventana">
+            <button class="cerrar_ventana" type="button">X</button>
+            <div class="ventana_container">
+            <div class="ventana_logo">
+                <img src="lista-de-verificacion.png" class="logo_item">
+            </div>
+            <span class="sub-titulo">¡Cita Reservada!</span>
+            <p>Tu cita ha sido registrada <br>exitosamente </p>
+            </div>
+        </div>
+        <div  class="confirmacion_container">
+            <div class="confirmacion_cita"></div>
+            <div class="email_cita"></div>
+        </div>
+    </div>
+
+
+    <!----------VENTANA MODAL JS END---------->
+
+
+
+    <script src="code.js"></script>
+
+</body>
+</html>

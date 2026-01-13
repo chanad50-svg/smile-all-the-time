@@ -1,0 +1,506 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background-principal: #48e;
+    --color-principal: #fff;
+    --fs-texto: clamp(0.9rem, 2vw, .93rem);
+    --fs-titulo: clamp(1.3rem, 2vw, 1.5rem);
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+    padding-bottom: 100px;
+    margin: 0;
+}
+
+/*--------HEADER-----------*/
+
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    background: linear-gradient(
+        #4488ee80,
+        #4488ee80
+        ),
+        url("https://omardental.com.ar/wp-content/uploads/2023/08/slider001.jpg");
+    background-size: cover;
+    background-position:center ;
+    color: var(--color-principal);
+    width: 100%;
+    height: 100dvh;
+    padding: 0px 20px;
+    
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+
+.header > * {
+    position: relative;
+    z-index: 2;
+}
+
+.header_container h1 {
+    font-weight: 0px;
+}
+
+.header_container p {
+    font-size: var(--fs-texto);
+    padding-top: 10px;
+    color: #fffa;
+}
+
+.logo_header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 25px;
+}
+
+.icon_header {
+    width: 40px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.header_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--background-principal);
+    background-color: var(--color-principal);
+    padding: 4px;
+    border-radius:6px ;
+    width: 200px;
+    text-decoration: none;
+    outline: transparent;
+}
+
+.icon_link {
+    display: inline-block;
+    width: 20px;
+    height: auto;
+}
+
+.reserved_appointment {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--background-principal);
+    background-color: transparent;
+    font-size: var(--fs-texto);
+    text-decoration: none;
+    outline: transparent;
+    
+}
+
+.flechita_header{
+    padding-left: 4px;
+}
+
+.header_link:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.1);
+}
+
+.header_link:hover .flechita_header {
+    font-size: 22px;
+    transform: translateX(4px);
+}
+
+
+/*--------HEADER END-----------*/
+
+/*--------NAV SECTION-----------*/
+
+.navbar {
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 20px;
+    width: 100%;
+    background-color: var(--color-principal);
+}
+
+.navbar h2 {
+    align-self: center;
+    font-weight: 300px;
+}
+
+h2 + p {
+    text-align: center;
+    padding: 0 20px;
+    font-size: clamp(.83rem, 2vw, 1rem);
+}
+
+.sub-titulo {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 1px;
+    color: #555;
+
+}
+
+.navbar_section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 20px;
+    width: 100%;
+    margin: auto;
+}
+
+.section_containers {
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid var(--color-principal);
+    border-radius: 12px;
+    box-shadow: 0px 0px 4px 1px #bbba;
+    font-size: var(--fs-texto);
+    background-color: var(--color-principal);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+.section_containers p {
+    padding-top: 10px;
+    color: #888
+}
+
+
+.section_containers:hover {
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 6px 1px #bbba, 0px 0px 8px 2px #bbba;
+}
+
+.btn--section.activo {
+    background-color: #3d75ba;
+    border: 1px solid #3d75ba;
+    transform: scale(1.1);
+}
+
+.navbar_logo.activo {
+    background-color: var(--color-principal);
+}
+
+.section_containers.activo span {
+    color: var(--color-principal);
+}
+
+.section_containers.activo p{
+    color: #ddd;
+}
+
+.navbar_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    background-color: var(--color-principal);
+    border-radius: 6px;
+    border: 1px solid var(--color-principal);
+}
+
+
+.navbar_img {
+    display: inline-block;
+    justify-content: center;
+    width: 40px;
+    min-height: 40px;
+    height: auto;
+}
+/*--------NAV SECTIONEND----------*/
+
+/*--------MAIN SECTION----------*/
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #f2ffff;
+    width:100%;
+    margin-top: 60px;
+    padding-top: 60px;
+    
+}
+
+.main_container{
+    width: clamp(330px, 60vw, 800px);
+}
+
+.titulo {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+}
+
+.titulo + p {
+    text-align: center;
+    padding: 0 20px;
+    font-size: var(--fs-texto);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 3px 10px 4px 3px  #bbba;
+    border-radius: 12px;
+    padding: 25px 20px;
+    gap: 20px;
+    
+}
+
+.span_service{
+    font-size: var(--fs-texto);
+    padding-bottom: 0;
+    margin: 0;
+    gap: 0;
+}
+
+#transport {
+    background-color: var(--color-principal);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: var(--fs-texto);
+    border: none;
+    outline: 2px solid #dddd
+}
+
+
+label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.label_date {
+    border: none;
+    outline: 2px solid #dddd;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.label_time {
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.informacion {
+    background: #bdd2efca;
+    padding: 20px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 60px;
+    width: 100%;
+}
+
+.informacion p {
+    margin: auto;
+}
+
+.date_personal {
+    font-size: var(--fs-texto);
+    
+}
+
+.datos {
+    display: flex;
+    width: 100%;
+    border: none;
+    outline: 2px solid #dddd;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: var(--fs-texto);
+}
+
+.button_reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--background-principal);
+    font-size: var(--fs-texto);
+    padding: 15px;
+    border: transparent;
+    border-radius: 12px;
+    color: var(--color-principal);
+    cursor: pointer ;
+}
+.flechita {
+    font-size: 20px;
+    display: inline-block;
+    transition: transform .25 ease, font-size .25 ease;
+}
+
+
+.button_reserva:hover .flechita {
+    font-size: 22px;
+    transform: translateX(6px);
+}
+
+button:hover {
+    background-color: #3d75ba;
+}
+
+/*--------VENTAN JS----------*/
+
+
+
+.ventana {
+    position: fixed;
+    width: clamp(360px, 60vw, 500px);
+    height: auto;
+    margin: auto;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-principal);
+    display: none;
+    z-index: 10;
+    cursor: pointer;
+    overflow-y: auto;
+    scrollbar-color: #48e #fff;
+    box-shadow: 0px 4px 100px 120px  #9999;
+}
+.ventana.activa {
+    display: block;
+}
+
+.ventana_container {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo_item {
+    width: 120px;
+    height: auto;
+}
+
+.items_ventana {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.items_ventana span {
+    font-size: var(--fs-titulo);
+}
+
+.items_ventana p {
+    text-align: center;
+    font-size: var(--fs-texto);
+}
+
+.cerrar_ventana {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    background-color: var(--color-principal);
+    border: none;
+}
+
+.confirmacion_container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    height: 230px;
+    background-color: #bdd2efca;
+    border-radius: 12px;
+    gap: 20px;
+}
+
+.confirmacion_cita  {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 5px;
+
+}
+
+.confirmacion_cita p{
+    font-size: var(--fs-texto);
+}
+
+.email_cita {
+    padding: 20px;
+    font-size: var(--fs-texto);
+    background-color: #bdcdfa;
+    width: 280px;
+    margin: auto;
+    border-radius: 12px;
+    border-left: 8px solid #3d75ba;
+}
+
+/*--------VENTAN JS END----------*/
+
+
+
+
+/*--------MEDIA QUERIST----------*/
+
+
+@media screen and (min-width: 480px){
+    .navbar_section{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        width: 100%;
+        
+    }
+
+
+
+    .container_label {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+        width: 100%;
+        height: auto;
+        gap: 20px;
+    }
+    .label_time {
+        width: 100%;
+        
+    }
+    
+    .datos{
+        display: grid;
+        width: 100%;
+    }
+}
